@@ -917,7 +917,7 @@
 				whenPastingInsertAsPlainText('zss_editor_title');
 				whenPastingInsertAsPlainText('zss_editor_content');
 
-				zss_editor.focusTitle();
+// 				zss_editor.focusTitle();
 
 				setTimeout(function() {
 					WebViewBridge.send(JSON.stringify({type: 'ZSS_INITIALIZED'}))
@@ -1694,13 +1694,13 @@
 				height: 100%;
 				-webkit-overflow-scrolling: touch;
 				overflow:auto;
-
+				overflow-x: hidden;
 			}
 
-			#zss_editor_content {
+/* 			#zss_editor_content {
 				padding-left: 10px;
 				padding-right: 10px;
-			}
+			} */
 
 			div.zss_editor_title {
 				font-family: 'Helvetica Neue Light', sans-serif;
