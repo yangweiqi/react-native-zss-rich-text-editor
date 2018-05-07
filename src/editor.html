@@ -874,7 +874,9 @@
 			}
 
 			zss_editor.init = function() {
-
+// 				replace div with p
+				document.execCommand("defaultParagraphSeparator", false, "p");
+				
 				disableLineBreakIfNecessary('zss_editor_title');
 				disableLineBreakIfNecessary('zss_editor_content');
 
