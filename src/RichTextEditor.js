@@ -90,7 +90,9 @@ export default class RichTextEditor extends Component {
     const {marginTop = 0, marginBottom = 0} = this.props.style;
     const spacing = marginTop + marginBottom + top + bottom;
 
-    const editorAvailableHeight = Dimensions.get('window').height - keyboardHeight - spacing;
+    const extraPadding = 200;
+    const editorAvailableHeight = Dimensions.get('window').height - keyboardHeight - spacing - extraPadding;
+//     const editorAvailableHeight = Dimensions.get('window').height - keyboardHeight - spacing;
     this.setEditorHeight(editorAvailableHeight);
   }
 
