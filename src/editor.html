@@ -885,10 +885,13 @@
 
 				clearHtmlIfTextIsEmpty('zss_editor_title');
 				clearHtmlIfTextIsEmpty('zss_editor_content');
-
+				
+				var isAndroid = /android/i.test(navigator.userAgent.toLowerCase());
 				$(document).on('selectionchange',function(e){
 					console.log('selectionchange');
-					zss_editor.calculateEditorHeightWithCaretPosition();
+					if(!isAndroid) {
+						zss_editor.calculateEditorHeightWithCaretPosition();
+					}
 					zss_editor.setScrollPosition();
 					zss_editor.enabledEditingItems(e);
 					notifyIfSelectedTextHasChanged();
